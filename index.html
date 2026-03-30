@@ -12,15 +12,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
         }
         .container {
             background-color: #1e293b;
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-            width: 400px;
+            width: 100%;
+            max-width: 450px;
             text-align: center;
         }
         h1 { color: #38bdf8; margin-bottom: 0.5rem; }
@@ -28,30 +30,61 @@
         .version-list {
             margin-top: 1.5rem;
             text-align: left;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            overflow: hidden;
         }
         .version-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
+            padding: 12px 15px;
             border-bottom: 1px solid #334155;
             transition: background 0.2s;
         }
-        .version-item:hover { background: #334155; border-radius: 6px; }
+        .version-item:last-child { border-bottom: none; }
+        .version-item:hover { background: #334155; }
         .tag {
-            background: #0ea5e9;
+            background: #22c55e;
+            color: white;
             padding: 2px 8px;
             border-radius: 4px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: bold;
+            margin-left: 8px;
         }
         .download-btn {
             text-decoration: none;
             color: #38bdf8;
             font-weight: 600;
             font-size: 0.85rem;
+            padding: 5px 10px;
+            border: 1px solid #38bdf8;
+            border-radius: 4px;
+            transition: 0.3s;
         }
-        .latest { border-left: 4px solid #22c55e; }
+        .download-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+        .security-note {
+            margin-top: 25px;
+            padding: 15px;
+            background: #0f172a;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 0.85rem;
+            border-left: 4px solid #fbbf24;
+        }
+        code {
+            background: #334155;
+            padding: 4px 6px;
+            border-radius: 4px;
+            display: block;
+            margin-top: 8px;
+            word-break: break-all;
+            color: #f472b6;
+        }
     </style>
 </head>
 <body>
@@ -60,41 +93,43 @@
     <h1>Node 24 Radar</h1>
     <p>Select a version to download the .app file</p>
 
-<div class="version-item latest">
-    <span>V1.2.2 <span class="tag">LATEST</span></span>
-    <a href="Node%2024%20Radar%20V1.2.2.app.zip" class="download-btn">Download</a>
-</div>
+    <div class="version-list">
+        <div class="version-item">
+            <span>V1.2.2 <span class="tag">LATEST</span></span>
+            <a href="Node%2024%20Radar%20V1.2.2.app.zip" class="download-btn">Download</a>
+        </div>
 
-<div class="version-item">
-    <span>V1.2.1</span>
-    <a href="Node%2024%20Radar%201.2.1.app.zip" class="download-btn">Download</a>
-</div>
+        <div class="version-item">
+            <span>V1.2.1</span>
+            <a href="Node%2024%20Radar%201.2.1.app.zip" class="download-btn">Download</a>
+        </div>
 
-<div class="version-item">
-    <span>V1.2</span>
-    <a href="Node%2024%20Radar%201.2.app.zip" class="download-btn">Download</a>
-</div>
+        <div class="version-item">
+            <span>V1.2</span>
+            <a href="Node%2024%20Radar%201.2.app.zip" class="download-btn">Download</a>
+        </div>
 
-<div class="version-item">
-    <span>V1.1</span>
-    <a href="Node%2024%20Radar%20V1.1.app.zip" class="download-btn">Download</a>
-</div>
+        <div class="version-item">
+            <span>V1.1</span>
+            <a href="Node%2024%20Radar%20V1.1.app.zip" class="download-btn">Download</a>
+        </div>
 
-<div class="version-item">
-    <span>V1.0</span>
-    <a href="Node%2024%20Radar.app.zip" class="download-btn">Download</a>
-</div>
+        <div class="version-item">
+            <span>V1.0</span>
+            <a href="Node%2024%20Radar.app.zip" class="download-btn">Download</a>
+        </div>
+    </div>
 
-    <div style="margin-top: 30px; padding: 15px; background: #334155; border-radius: 8px; text-align: left; font-size: 0.85rem;">
-    <h3 style="margin-top: 0; color: #fbbf24;">⚠️ Mac Security Note</h3>
-    <p>If you see <i>"App can't be opened"</i>, follow these steps:</p>
-    <ol>
-        <li>Right-click <b>Node 24 Radar.app</b> in Finder.</li>
-        <li>Select <b>Open</b> from the menu.</li>
-        <li>Click <b>Open</b> again on the popup dialog.</li>
-    </ol>
-    <p>Or, run this in Terminal to fix it instantly:</p>
-    <code>xattr -cr /Applications/Node\ 24\ Radar\ [Version]</code>
+    <div class="security-note">
+        <h3 style="margin-top: 0; color: #fbbf24; font-size: 1rem;">⚠️ Mac Security Note</h3>
+        <p>If you see <i>"App can't be opened"</i>:</p>
+        <ol style="padding-left: 20px;">
+            <li>Right-click the app in Finder.</li>
+            <li>Select <b>Open</b>.</li>
+        </ol>
+        <p>Or paste this in Terminal:</p>
+        <code>xattr -cr ~/Downloads/Node\ 24\ Radar*.app</code>
+    </div>
 </div>
     
 </body>
