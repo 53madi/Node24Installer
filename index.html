@@ -6,7 +6,7 @@
     <title>Install Node 24 Radar</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'SF Pro Display', -apple-system, system-ui, sans-serif;
             background-color: #0f172a;
             color: #f8fafc;
             display: flex;
@@ -18,32 +18,36 @@
         }
         .container {
             background-color: #1e293b;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
             width: 100%;
-            max-width: 450px;
+            max-width: 480px;
             text-align: center;
+            border: 1px solid #334155;
         }
-        h1 { color: #38bdf8; margin-bottom: 0.5rem; }
-        p { color: #94a3b8; font-size: 0.9rem; }
+        h1 { color: #38bdf8; margin-bottom: 0.5rem; font-weight: 800; }
+        p.subtitle { color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.5rem; }
+        
         .version-list {
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             text-align: left;
             border: 1px solid #334155;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
+            background: #111827;
         }
         .version-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 15px;
+            padding: 14px 18px;
             border-bottom: 1px solid #334155;
             transition: background 0.2s;
         }
         .version-item:last-child { border-bottom: none; }
-        .version-item:hover { background: #334155; }
+        .version-item:hover { background: #1e293b; }
+        
         .tag {
             background: #22c55e;
             color: white;
@@ -58,9 +62,9 @@
             color: #38bdf8;
             font-weight: 600;
             font-size: 0.85rem;
-            padding: 5px 10px;
+            padding: 6px 12px;
             border: 1px solid #38bdf8;
-            border-radius: 4px;
+            border-radius: 6px;
             transition: 0.3s;
         }
         .download-btn:hover {
@@ -71,19 +75,20 @@
             margin-top: 25px;
             padding: 15px;
             background: #0f172a;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: left;
             font-size: 0.85rem;
             border-left: 4px solid #fbbf24;
         }
         code {
             background: #334155;
-            padding: 4px 6px;
-            border-radius: 4px;
+            padding: 8px;
+            border-radius: 6px;
             display: block;
-            margin-top: 8px;
+            margin-top: 10px;
             word-break: break-all;
             color: #f472b6;
+            font-family: monospace;
         }
     </style>
 </head>
@@ -91,7 +96,7 @@
 
 <div class="container">
     <h1>Node 24 Radar</h1>
-    <p>Select a version to download the .app file</p>
+    <p class="subtitle">Select a version to download the .app or .pkg file</p>
 
     <div class="version-list">
         <div class="version-item">
@@ -99,7 +104,6 @@
             <a href="Node%2024%20Radar%20V1.2.3.pkg" class="download-btn">Download</a>
         </div>
     
-    <div class="version-list">
         <div class="version-item">
             <span>V1.2.2</span>
             <a href="Node%2024%20Radar%20V1.2.2.app.zip" class="download-btn">Download</a>
@@ -121,7 +125,7 @@
         </div>
 
         <div class="version-item">
-            <span>V1.0</span>
+            <span>V1.0 <span style="opacity: 0.5; font-size: 0.7rem; margin-left: 5px;">(OG)</span></span>
             <a href="Node%2024%20Radar.app.zip" class="download-btn">Download</a>
         </div>
     </div>
@@ -134,7 +138,7 @@
             <li>Select <b>Open</b>.</li>
         </ol>
         <p>Or paste this in Terminal:</p>
-        <code>xattr -cr ~/Downloads/Node\ 24\ Radar*.app</code>
+        <code>xattr -cr /Applications/Node\ 24\ Radar*.app</code>
     </div>
 </div>
     
