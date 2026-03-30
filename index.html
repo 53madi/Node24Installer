@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Node 24 Radar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #1e293b;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+            width: 400px;
+            text-align: center;
+        }
+        h1 { color: #38bdf8; margin-bottom: 0.5rem; }
+        p { color: #94a3b8; font-size: 0.9rem; }
+        .version-list {
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+        .version-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #334155;
+            transition: background 0.2s;
+        }
+        .version-item:hover { background: #334155; border-radius: 6px; }
+        .tag {
+            background: #0ea5e9;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .download-btn {
+            text-decoration: none;
+            color: #38bdf8;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .latest { border-left: 4px solid #22c55e; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Node 24 Radar</h1>
+    <p>Select a version to download the .app file</p>
+
+    <div class="version-list">
+        <div class="version-item latest">
+            <span>V1.2.2 <span class="tag">LATEST</span></span>
+            <a href="Node_24_Radar_V1.2.2.app" class="download-btn">Download</a>
+        </div>
+
+        <div class="version-item">
+            <span>V1.2.1</span>
+            <a href="Node_24_Radar_V1.2.1.app" class="download-btn">Download</a>
+        </div>
+
+        <div class="version-item">
+            <span>V1.2</span>
+            <a href="Node_24_Radar_V1.2.app" class="download-btn">Download</a>
+        </div>
+
+        <div class="version-item">
+            <span>V1.1</span>
+            <a href="Node_24_Radar_V1.1.app" class="download-btn">Download</a>
+        </div>
+
+        <div class="version-item">
+            <span>V1.0</span>
+            <a href="Node_24_Radar_V1.0.app" class="download-btn">Download</a>
+        </div>
+    </div>
+
+    <p style="margin-top: 20px; font-size: 0.7rem;">
+        Drag the downloaded file to your <b>Applications</b> folder.
+    </p>
+</div>
+
+</body>
+</html>
